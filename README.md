@@ -22,6 +22,15 @@ The output is an interactive dashboard that allows users to explore how these si
 
 ---
 
+# 📚 Data Collection Methodology
+
+The dataset for Kotoba Signals was constructed using 50 question-and-answer pairs sourced from Yahoo! Chiebukuro (知恵袋). Each entry consists of a naturally occurring user question paired with a human-provided response from the platform.
+
+To create a comparative baseline for analysis, each question was also independently answered using ChatGPT. This resulted in two parallel response sets for every prompt: one human-generated and one model-generated.
+
+This structure enables direct comparison between human and AI responses across linguistic features, response strategies, and informational framing. The goal is to support downstream analysis of differences in tone, structure, and content generation between native human discourse and large language model outputs.
+
+
 # 📦 Key Features
 
 ## Text Processing Pipeline
@@ -57,7 +66,7 @@ Built with Dash and Plotly:
 ---
 
 # 🏗️ Project Structure
-
+```text
 kotoba-signals/
 ├── app/
 │   └── kotoba_dash_app.py
@@ -70,7 +79,7 @@ kotoba-signals/
 ├── notebooks/
 │   └── kotoba_signals.ipynb
 └── README.md
-
+```
 ---
 
 # 🚀 How to Run the App
