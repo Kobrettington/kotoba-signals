@@ -116,11 +116,3 @@ English Translation:
 # 📈 Intended Use
 
 Educational and exploratory NLP tool for comparing human vs AI Japanese writing styles.
-
-
-
-Can you provide short explanations for each of these charts?
-
-[feature] by Label
-Linguistic Space (Entropy vs Connectives)
-Distribution of [feature]
