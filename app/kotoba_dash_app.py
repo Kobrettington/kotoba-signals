@@ -98,25 +98,62 @@ app.layout = html.Div([
     # COMPONENT 4: Text input
     # ------------------------
     html.Label("Test Your Own Japanese Text"),
-    dcc.Textarea(
-        id="user-text",
-        placeholder="Enter Japanese text here...",
-        style={"width": "100%", "height": 100}
-    ),
 
-    html.Hr(),
+        dcc.Textarea(
+            id="user-text",
+            placeholder="Enter Japanese text here...",
+            style={"width": "100%", "height": 100}
+        ),
+
+        html.Div(
+            id="user-analysis-output",
+            style={
+                "marginTop": "15px",
+                "padding": "15px",
+                "backgroundColor": "#f8f9fa",
+                "border": "1px solid #ddd",
+                "borderRadius": "8px"
+            }
+        ),
+
+        html.Hr(),
 
     # ------------------------
     # Graphs
     # ------------------------
 
+    html.H3("Feature Comparison"),
+
+    html.P(
+        "Compares the selected linguistic feature between human-written and "
+        "AI-generated texts. The box plot highlights differences in typical "
+        "values, variability, and outliers for each group."
+    ),
+
     dcc.Graph(id="distribution-plot"),
+
+    html.H3("Linguistic Space"),
+
+    html.P(
+        "Plots each text according to its sentence-ending entropy and "
+        "connective density. Clusters or separation between human and AI "
+        "texts may reveal distinct stylistic patterns and writing behaviors."
+    ),
+
     dcc.Graph(id="pca-plot"),
-    dcc.Graph(id="histogram-plot"),
+
+    html.H3("Feature Distribution"),
+
+    html.P(
+        "Displays how frequently different values of the selected feature "
+        "occur across the dataset. Comparing the human and AI distributions "
+        "helps identify whether one group tends to use the feature more often "
+        "or more consistently."
+    ),
+
+dcc.Graph(id="histogram-plot"),
 
     html.Hr(),
-
-    html.Div(id="user-analysis-output")
 
 ])
 
