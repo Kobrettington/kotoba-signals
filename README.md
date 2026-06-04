@@ -71,7 +71,7 @@ kotoba-signals/
 ├── app/
 │   └── kotoba_dash_app.py
 │   ├── assets/
-│       └── kotoba_dash_app.py
+│       └── typography.css
 ├── data/
 │   └── raw/
 │       └── yahoo_questions.csv
